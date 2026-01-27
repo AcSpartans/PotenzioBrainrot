@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Potenzio Brainrot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Impact, Arial rgb(62, 27, 158), sans-serif;
+}
+
+body{
+    min-height:220vh;
+    background: radial-gradient(circle at top, #939695, #001a14 70%);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    animation:bgAnim 12s infinite alternate;
+}
+
+/* BACKGROUND MOVE */
+@keyframes bgAnim{
+    from{background-position:0% 0%;}
+    to{background-position:100% 100%;}
+}
+
+/* MAIN BOX */
+.main{
+    margin-top:140px;
+    max-width:1500px;
+    padding:160px 90px;
+    text-align:center;
+    background:linear-gradient(145deg,#021f17,#032d23);
+    border-radius:90px;
+    box-shadow:
+        0 0 80px #00ff9c,
+        0 0 160px #00ffff;
+    animation:float 4s ease-in-out infinite;
+}
+
+/* FLOAT */
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-25px);}
+}
+
+/* TITLE */
+.main h1{
+    font-size:clamp(5rem,9vw,9rem);
+    letter-spacing:8px;
+    color:#00ff9c;
+    text-shadow:
+        0 0 30px #00ff9c,
+        0 0 70px #00ffff;
+}
+
+/* SUBTITLE */
+.main h3{
+    margin-top:15px;
+    font-size:1.6rem;
+    font-weight:normal;
+    letter-spacing:3px;
+    opacity:0.8;
+}
+
+/* TEXT */
+.main p{
+    margin-top:90px;
+    font-size:clamp(2.5rem,4.3vw,4rem);
+    line-height:1.5;
+    text-shadow:
+        0 0 15px #00ffff,
+        0 0 35px #00ff9c;
+    animation:textPulse 2.5s infinite alternate;
+}
+
+@keyframes textPulse{
+    from{opacity:0.85;}
+    to{opacity:1;}
+}
+
+/* BUTTON */
+button{
+    margin-top:130px;
+    padding:50px 160px;
+    font-size:3.2rem;
+    font-weight:bold;
+    border:none;
+    border-radius:150px;
+    cursor:pointer;
+    background:linear-gradient(90deg,#00ff9c,#00ffff);
+    color:black;
+    box-shadow:
+        0 0 70px #00ff9c,
+        0 0 140px #00ffff;
+    animation:buttonGlow 2s infinite alternate;
+    transition:transform 0.3s;
+}
+
+button:hover{
+    transform:scale(1.2) rotate(-1deg);
+}
+
+@keyframes buttonGlow{
+    from{box-shadow:0 0 50px #00ff9c;}
+    to{box-shadow:0 0 150px #00ffff;}
+}
+
+/* EXTRA SPACE */
+.spacer{
+    height:800px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSICA -->
+<audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="main">
+
+    <!-- TITOLO + AUTORE -->
+    <h1>Potenzio Brainrot</h1>
+    <h3>By ZynoX15</h3>
+
+    <!-- TESTO IDENTICO AL TUO -->
+    <p>
+        Ciao Ragazzi Sono sempre io ZynoX15 in questo sito potenzio a gratis
+        i brainrot su Tsunami For Brainrot dovrete solo mandarmi un email
+        dal bottone qui sotto e scrivere il vostro ID Robloxx.
+    </p>
+
+    <!-- BOTTONE -->
+    <button onclick="inviaEmail()">INVIA EMAIL 🚀</button>
+
+</div>
+
+<div class="spacer"></div>
+
+<script>
+function inviaEmail(){
+    window.open(
+        "https://mail.google.com/mail/?view=cm&fs=1&to=francescobuffone51@gmail.com&su=Tsunami%20For%20Brainrot&body=Ciao!%20Il%20mio%20ID%20Robloxx%20è:",
+        "_blank"
+    );
+}
+</script>
+
+</body>
+</html>
